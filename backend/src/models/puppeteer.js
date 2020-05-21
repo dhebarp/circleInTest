@@ -9,11 +9,21 @@ async function scrapeUrl(url, keyWord) {
 
   const reg = new RegExp(keyWord, "gi");
 
-  const matched = contents.match(reg).length;
+  const matched = contents.match(reg);
+
+
+let value  = 0
+
+// rather than display an error the value will be set to 0 for false results.
+  if (matched != null) {
+    value = matched.length
+  } else {
+    value = 0
+  }
 
   browser.close();
-  console.log(matched);
-  return matched;
+  return {url, keyWord, value}
 }
 
-scrapeUrl("https://en.wikipedia.org/wiki/Abraham_Lincoln#Funeral_and_burial", "Abraham");
+
+module.exports = { scrapeUrl }  
