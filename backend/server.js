@@ -10,6 +10,13 @@ app.use(function(req, res, next) {
   next();
   })
 
+  app.post('/search/v1', async (req, res, next) => {
+    console.log(req.body);
+
+    res.send("success")
+  });
+
+
 
 const port = process.env.PORT || 4000;
 app.listen(port, () => {
