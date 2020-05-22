@@ -1,6 +1,7 @@
 import React from 'react'
 import { Navbar, Nav, Button, Form } from "react-bootstrap";
 import { BsSearch } from "react-icons/bs";
+import "../Nav/nav.css";
 
 export const NavPage = () => {
   return (
@@ -25,6 +26,11 @@ export const NavPage = () => {
           <BsSearch size="1em" />
         </Form>
       </Navbar>
+      <div className="container-fluid fornav">
+        <div className="row justify-content-center"></div>
+        <h1>Seach for youself</h1>
+        <p> A detailed URL search to check your web presence.</p>
+      </div>
     </div>
   )
 }
