@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Form, Button, Card } from "react-bootstrap";
+import './search.css'
 
 export const Search = () => {
 
@@ -23,7 +24,7 @@ export const Search = () => {
       credentials: "same-origin",
       body: JSON.stringify({
         keyWord: keyWord,
-        channelURL: url,
+        webURL: url,
       }),
     })
       .then((res) => res.json())
@@ -37,13 +38,13 @@ export const Search = () => {
   };
 
 
-  return (
-   <>
-     <div className="container">
-        <Form onSubmit={submitHandler}>
+  const renderForm = () => {
+    return (
+      <div className="container" style={{height: '200px'}}>
+        <Form onSubmit={submitHandler} style={{marginTop: '50px'}}>
           <Form.Group>
             <Form.Control
-              required="true"
+              required
               value={keyWord}
               placeholder="Enter keyword"
               onChange={(e) => setkeyWord(e.target.value)}
@@ -51,18 +52,49 @@ export const Search = () => {
           </Form.Group>
           <Form.Group>
             <Form.Control
-              required="true"
+              required
               value={url}
               placeholder="Enter URL  e.g. https://www.google.com"
               onChange={(e) => setUrl(e.target.value)}
             />
           </Form.Group>
-          <Button type="submit">Search</Button>
+          <Button type="submit" className="infoButton" style={{textAlign: 'center'}}>Search</Button>
         </Form>
-        {results.keyWord}
-        {results.value}
-        {results.url}
       </div>
+    );
+  };
+
+  const renderResults = () => {
+
+    if(results === "") {
+      return (
+        <div className="container result" style={{height: '300px'}}>
+      <h1 className="text-center" style={{margin: '50px 0px'}}>Search Results for: {results.keyword}</h1>
+      <p>Sorry, we couldn't find any posts. Please try a different search.</p>
+      </div>
+        )
+    }else {
+      return (
+        <div className="container result" style={{height: '500px'}}>
+          <h1 className="text-center" style={{margin: '50px 0px'}}>Search Results for: {results.keyWord}</h1>
+          <Card className="flex-row flex-wrap result" style={{height: '300px'}}>
+            <Card.Img src="https://res.cloudinary.com/people-matters/image/upload/w_624,h_351,c_scale,q_auto,f_auto/v1492931658/1492931658.jpg" className='col-4' style={{padding: '10px' }}/>
+            <Card.Body className='col-6 text-left'style={{margin: '50px 0px'}}>
+              <Card.Text> Your Search using the keyword: {results.keyWord}</Card.Text>
+              <Card.Text>appeared {results.value} times</Card.Text>
+              <Card.Text>in the the URL: {results.url}</Card.Text>
+            </Card.Body>
+          </Card>
+          </div>
+      );
+    }
+    }
+
+
+  return (
+   <>
+     {!conditional && renderForm()}
+      {conditional && renderResults()}
    </>
   )
 }
