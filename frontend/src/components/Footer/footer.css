@@ -1,0 +1,73 @@
+.container {
+  text-align: left;
+  font-family: 'Lato' , sans-serif;
+  color: #5f5f5f;
+  font-weight: 400;
+  margin-top: 20px;
+}
+
+.container h5{
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+.container .row .list{
+margin-left: 10px;
+}
+
+.container ul{
+  font-size: 18px;
+  list-style: none;
+  padding-left: 0;
+}
+.container li{
+  font-size: 18px;
+  padding: 2px;
+}
+
+
+.container li:hover{
+  color: #f69051 !important;
+}
+
+.react-icons {
+  margin: 5px;
+}
+
+.infocard {
+  height: '200px';
+  background-color: #f1faf8 !important;
+  text-align: center;
+  box-shadow: rgba(0, 0, 0, 0.05) 0px -1px 5px 0px, rgba(0, 0, 0, 0.07) 0px 2px 5px 0px, rgba(16, 70, 81, 0.1) 0px 5px 10px 0px;
+}
+
+.row .infoButton {
+  box-shadow: rgba(0, 0, 0, 0.26) 2px 2px 3px 1px;
+  margin-left: 20px !important;
+  font-size: 15px !important;
+  
+}
+
+.container-fluid {
+  padding: 60px 0px !important;
+  margin-top: 30px;
+  margin-bottom: 30pxw;
+  background-color: #f8f6f3;
+  font-family: 'Lato' , sans-serif;
+}
+
+.subscribeButton {
+background-color: #ffffff !important;
+color: black !important;
+border-color: #f69051 !important;
+border-radius: 10px !important;
+border-width: 2px !important;
+font-size: 18px;
+box-shadow: rgba(246, 144, 81, 0.26) 2px 2px 3px 1px;
+padding-left: 22px !important;
+padding-right: 22px !important;
+}
+
+.container-fluid .col-4{
+  padding-right: 30px !important;
+}

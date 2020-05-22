@@ -11,6 +11,82 @@ export const Foot = () => {
     // footer brought from previous work!
     <div>
        <footer className="page-footer">
+       <div className="container">
+          <div className="row">
+            <div className="col">
+              <Card className="infocard">
+                <Card.Body>
+                  <Card.Title style={{ fontWeight: "bold" }}>
+                    Book a demo
+                  </Card.Title>
+                  <Card.Text style={{ color: "black" }}>
+                    To see how Circle In can work for your workplace.
+                  </Card.Text>
+                  <br />
+                  <Button className="infoButton mr-sm-2 text-center">
+                    Book a demo
+                  </Button>
+                </Card.Body>
+              </Card>
+            </div>
+            <div className="col">
+              <Card className="infocard">
+                <Card.Body>
+                  <Card.Title style={{ fontWeight: "bold" }}>
+                    Discover the cost
+                  </Card.Title>
+                  <Card.Text style={{ color: "black" }}>
+                    Discover the cost of investment and measure the impact with
+                    our business case template.
+                  </Card.Text>
+                  <Button className="infoButton mr-sm-2 text-center">
+                    Discover now
+                  </Button>
+                </Card.Body>
+              </Card>
+            </div>
+            <div className="col">
+              <Card className="infocard">
+                <Card.Body>
+                  <Card.Title style={{ fontWeight: "bold" }}>
+                    More questions
+                  </Card.Title>
+                  <br />
+                  <Card.Text style={{ color: "black" }}>Let us help.</Card.Text>
+                  <br />
+                  <Button className="infoButton mr-sm-2 text-center">
+                    Contact us
+                  </Button>
+                </Card.Body>
+              </Card>
+            </div>
+          </div>
+        </div>
+        <div className="container-fluid">
+          <div className="row justify-content-center">
+            <div className="col-4 text-left">
+              <h2>Get the latest industry insights direct to your inbox</h2>
+              <p>
+                Industry news, research and advice for organisations supporting
+                working parents.
+              </p>
+            </div>
+            <div className="col-1"/>
+            <div className="col-3">
+              <Form>
+                <Form.Group>
+                  <Form.Control placeholder="First name*"/>
+                </Form.Group>
+                <Form.Group>
+                  <Form.Control type="email" placeholder="Email*" />
+                </Form.Group>
+                <Button className="subscribeButton">
+                  Subscribe
+                </Button>
+              </Form>
+            </div>
+          </div>
+        </div>
         <div className="container">
           <div className="row list">
             <div className={"col"}>
