@@ -1,4 +1,5 @@
-import React from 'react'
+import React, { useState } from "react";
+import { Form, Button, Card } from "react-bootstrap";
 
 export const Search = () => {
 
@@ -11,7 +12,7 @@ export const Search = () => {
   return (
    <>
      <div className="container">
-        <Form onSubmit={submitHandler}>
+        <Form>
           <Form.Group>
             <Form.Control
               required="true"
